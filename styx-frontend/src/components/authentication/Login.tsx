@@ -5,7 +5,7 @@ const Login :React.FC = () => {
         <>
         <div className="login-container">
             <div className="login-div">
-                <Space  size={'middle'}>
+                <Space size={'middle'}>
                     <span>تسجيل الدخول</span>
                 </Space>
             </div>
