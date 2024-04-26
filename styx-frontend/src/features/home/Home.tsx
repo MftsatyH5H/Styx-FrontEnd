@@ -6,11 +6,9 @@ import { Content } from 'antd/es/layout/layout'
 function Home() {
   return (
     <Layout>
-        <HeaderCom></HeaderCom>
-        <Layout>
-           <Content></Content> 
-           <SiderCom></SiderCom>
-        </Layout>
+          <HeaderCom></HeaderCom>
+          <Content></Content> 
+          <SiderCom></SiderCom>
     </Layout>
   )
 }

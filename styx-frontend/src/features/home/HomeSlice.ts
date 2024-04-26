@@ -3,14 +3,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    collapse: false
+    collapse: true
 }
 //@ts-ignore
 
 const homeSlice = createSlice({
     name: 'home',
     initialState,
-    reducers: {}
+    reducers: {
+        swapCollapse: (state) => {
+            state.collapse = !state.collapse
+        }
+    }
 });
 
+export const { swapCollapse } = homeSlice.actions;
 export default homeSlice.reducer;

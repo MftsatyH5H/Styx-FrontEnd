@@ -9,5 +9,12 @@ export default class usersApi {
         this.baseUrl = baseApi.baseUrl;
     }
 
-    getUsers = (page:number) => { return axios.get(`${this.baseUrl}/users?page=${page}`); }
+    getUsers = (page:number,jwt:string) => { 
+        const config = {
+            headers: {
+              Authorization: `Bearer ${jwt}`
+            }
+          };
+        return axios.get(`${this.baseUrl}/users?page=${page}`,config); 
+    }
 }

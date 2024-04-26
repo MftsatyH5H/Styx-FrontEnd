@@ -21,13 +21,13 @@ function AppRouter() {
                     <Layout>
                         <HeaderCom></HeaderCom>
                         <Layout>
+                            <SiderCom></SiderCom>
                             <Content>
                                 <Routes>
                                     <Route path="/" Component={UsersView} />
                                     <Route path="/users" Component={UsersView} />
                                 </Routes>
                             </Content>
-                            <SiderCom></SiderCom>
                         </Layout>
                     </Layout>
                 )}

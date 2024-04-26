@@ -5,12 +5,15 @@ import { useSelector } from 'react-redux'
 function SiderCom() {
     //@ts-ignore
     const userType = useSelector(state => state.user.userType);
+    //@ts-ignore
+    const collapsed = useSelector(state => state.home.collapse);
     const Items = () => {
         if (userType === '3'){
             return [
                 {
                     key: '1',
-                    label: 'المستخدمين'
+                    label: 'المستخدمين',
+                    value: '/users'
                 },
                 {
                     key: '2',
@@ -44,7 +47,7 @@ function SiderCom() {
         }
     }
   return (
-    <Sider trigger={null} theme='light' collapsible style={{height: '80vh'}} collapsed={false}>
+    <Sider trigger={null} theme='light' collapsible style={{height: '80vh'}} collapsed={collapsed}>
         <div  />
         <Menu
           mode="inline"

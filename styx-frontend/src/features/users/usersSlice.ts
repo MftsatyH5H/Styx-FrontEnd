@@ -10,11 +10,11 @@ const initialState = {
     error: ''
 }
 //@ts-ignore
-export const getUsers = createAsyncThunk('users/getUsers', async ({page}) => {
+export const getUsers = createAsyncThunk('users/getUsers', async ({page, jwt}) => {
     const api = new usersApi();
 
     try {
-        const response = await api.getUsers(page)
+        const response = await api.getUsers(page, jwt)
         return response.data
     } catch (error) {
         //@ts-ignore
